@@ -1,0 +1,36 @@
+#main_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container, #player, .control {
+    outline: 1px solid red;
+}
+
+.container {
+    display: flex;
+    height: 70vh;
+    width: 50%;
+    min-width: 500px;
+}
+
+#player {
+    flex-grow: 3;
+    display: flex;
+    align-items: flex-end;
+}
+
+#player .control {
+    outline: 1px solid cyan;
+    background-color: orange;
+    height: 10%;
+    width: 100%;
+}
+
+#phone-img {
+    height: 100%;
+    flex-grow: 0;
+}
