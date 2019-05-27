@@ -1,3 +1,7 @@
+body {
+    
+}
+
 #main_container {
     width: 100vw;
     height: 100vh;
@@ -6,8 +10,9 @@
     justify-content: center;
 }
 
-.container, #player, .control {
-    outline: 1px solid red;
+
+.container, #player {
+    font-family: 'Righteous', cursive;
 }
 
 .container {
@@ -15,21 +20,52 @@
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: ". .";
-    height: 70vh;
-    width: 600px;
+    height: 80vh;
+    width: 700px;
 }
 
+#dialed_number {
+    text-align: right;
+}
+
+#dialed_container {
+    display: flex;
+    width: 70%;
+    padding: 2%;
+    padding-right: 5%;
+    justify-content: flex-end;
+}
+#backspace {
+    background-image: url(imgs/backspace-arrow.png);
+    width: 30px;
+    height: 30px;
+    margin-left: 5%;
+}
+
+#playing_name {
+    background-color: white;
+    width: 100%;
+}
+#visualization {
+    flex-grow: 1;
+}
 #player {
     flex-grow: 3;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    background-color: black;
+}
+#player progress {
+    width: 100%;
 }
 
-#player .control {
-    outline: 1px solid cyan;
+.control {
     background-color: orange;
     height: 10%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #phone {
@@ -40,7 +76,8 @@
     background-image: url(imgs/phone.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
+    font-family: 'Righteous', cursive;
 }
 
 #keypad {
@@ -54,15 +91,69 @@
 #dial_button {
     margin: 2%;
     width: 68%;
+    border: 1px solid black;
 }
 #keypad button {
     width: 30%;
     margin: 1%;
+    border: 1px solid black;
+    border-width: 0 0 1px 0;
+    background-color: whitesmoke;
+    transition: background-color 0.5s ease;
+}
+#keypad button:hover {
+    background-color: lightgray;
 }
 
-#dialed_number {
-    text-align: right;
-    width: 70%;
-    padding: 2%;
-    padding-right: 5%;
+#keypad button:active {
+    background-color: green;
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+}
+.control button, .control .volume span, #backspace {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.control button:hover {
+    transform: scale(1.2);
+}
+.control .play {
+    background-image: url(imgs/play-button.png);
+    width: 30px;
+    height: 30px;
+}
+.control .pause {
+    background-image: url(imgs/pause.png);
+    display: none;
+}
+.control .stop {
+    background-image: url(imgs/stop.png);
+    width: 15px;
+    height: 15px;
+}
+.control .next {
+    background-image: url(imgs/next.png);
+}
+.control .previous {
+    background-image: url(imgs/back.png);
+}
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volume img {
+    height: 15px;
+    margin: 3%;
 }

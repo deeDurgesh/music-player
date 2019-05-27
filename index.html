@@ -7,31 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Player</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Indie+Flower|Righteous|Roboto+Mono&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <div id="main_container">
         <div class="container">
             <div id="phone">
-                <span id="dialed_number">123456789</span>
+                <span id="dialed_container"> <span id="dialed_number">123456789</span><button id="backspace" onclick="backspace()"></button></span>
                 <div id="keypad">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>*</button>
-                    <button>0</button>
-                    <button>#</button>
+                    <button onclick="keypadClick(1)">1</button>
+                    <button onclick="keypadClick(2)">2</button>
+                    <button onclick="keypadClick(3)">3</button>
+                    <button onclick="keypadClick(4)">4</button>
+                    <button onclick="keypadClick(5)">5</button>
+                    <button onclick="keypadClick(6)">6</button>
+                    <button onclick="keypadClick(7)">7</button>
+                    <button onclick="keypadClick(8)">8</button>
+                    <button onclick="keypadClick(9)">9</button>
+                    <button onclick="keypadClick('*')">*</button>
+                    <button onclick="keypadClick(0)">0</button>
+                    <button onclick="keypadClick('#')">#</button>
                 </div>
-                <button id="dial_button">dial</button>
+                <button id="dial_button" onclick="dialAction()">dial</button>
             </div>
             <div id="player">
-                <div class="control"></div>
+                <div id="visualization"></div>
+                <span id="playing_name">music name</span>
+                <progress value="22" max="100"></progress>
+                <div class="control">
+                    <audio id="audio_player" src=""></audio>
+                    <button class="btn previous" onclick="previous()"></button>
+                    <button class="btn play" onclick="play()"></button>
+                    <button class="btn pause" onclick="pause()"></button>
+                    <button class="btn next" onclick="next()"></button>
+                    <button class="btn stop" onclick="stop()"></button>
+                    <div class="volume">
+                        <img src="css/imgs/speaker.png">
+                        <input type="range" value="50" min="0" max="100">
+                        <img src="css/imgs/speaker-filled-audio-tool.png">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
