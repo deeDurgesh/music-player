@@ -1,5 +1,4 @@
 body {
-    
 }
 
 #main_container {
@@ -9,19 +8,21 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-
 .container, #player {
     font-family: 'Righteous', cursive;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: ". .";
     height: 80vh;
-    width: 700px;
+    width: 800px;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 26px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 26px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 26px -3px rgba(0,0,0,0.75);
 }
 
 #dialed_number {
@@ -45,9 +46,6 @@ body {
 #playing_name {
     background-color: white;
     width: 100%;
-}
-#visualization {
-    flex-grow: 1;
 }
 #player {
     flex-grow: 3;
@@ -78,6 +76,7 @@ body {
     background-repeat: no-repeat;
     padding-bottom: 25%;
     font-family: 'Righteous', cursive;
+    min-width: 250px;
 }
 
 #keypad {
@@ -156,4 +155,18 @@ button {
 .volume img {
     height: 15px;
     margin: 3%;
+}
+#visualization {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span.bar {
+    background: yellow;
+    display: inline-block;
+    width: 1.5%;
+    transition: height .35s ease-in; 
 }

@@ -14,28 +14,62 @@
 </head>
 
 <body>
+    <input type="file" name="" id="file_choose" />
     <div id="main_container">
         <div class="container">
             <div id="phone">
                 <span id="dialed_container"> <span id="dialed_number">123456789</span><button id="backspace" onclick="backspace()"></button></span>
-                <div id="keypad">
-                    <button onclick="keypadClick(1)">1</button>
-                    <button onclick="keypadClick(2)">2</button>
-                    <button onclick="keypadClick(3)">3</button>
-                    <button onclick="keypadClick(4)">4</button>
-                    <button onclick="keypadClick(5)">5</button>
-                    <button onclick="keypadClick(6)">6</button>
-                    <button onclick="keypadClick(7)">7</button>
-                    <button onclick="keypadClick(8)">8</button>
-                    <button onclick="keypadClick(9)">9</button>
-                    <button onclick="keypadClick('*')">*</button>
-                    <button onclick="keypadClick(0)">0</button>
-                    <button onclick="keypadClick('#')">#</button>
+                <div id="keypad" onclick="keypadClick(event)">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>*</button>
+                    <button>0</button>
+                    <button>#</button>
                 </div>
                 <button id="dial_button" onclick="dialAction()">dial</button>
             </div>
             <div id="player">
-                <div id="visualization"></div>
+                <div id="visualization">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
                 <span id="playing_name">music name</span>
                 <progress value="22" max="100"></progress>
                 <div class="control">
