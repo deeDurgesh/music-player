@@ -110,19 +110,19 @@ function keypadClick(n) {
 }
 function dialAction() {
     let k = dialedNumber.innerText;
-    if(!k) {
+    if (!k) {
         alert('no value specified');
         return;
     }
 
     let song = musicFiles[Number(k)];
 
-    if(!song) {
-        alert('no music file found for: '+k);
+    if (!song) {
+        alert('no music file found for: ' + k);
         return;
     }
 
-    load('./audio/85bpm/'+song);
+    load('./audio/85bpm/' + song);
     play();
 }
 
@@ -144,3 +144,10 @@ volume_slider.addEventListener('change', function () {
     player.volume = Number(volume_slider.value) / 100;
 });
 
+function loadDefault() {
+    load('audio/Kalimba.mp3');
+}
+
+document.getElementById('fileloader').onchange = function () {
+    load(URL.createObjectURL(this.files[0]));
+}

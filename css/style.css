@@ -176,9 +176,9 @@ button {
 }
 
 span.bar {
-  background-color: yellow;
+  background-color: white;
   display: inline-block;
-  width: calc(100% / 35);
+  width: calc(100% / 67);
 }
 
 #playing_name {

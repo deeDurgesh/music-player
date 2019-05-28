@@ -7,7 +7,7 @@
     <title>Music Player</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="audio/85bpm/files.js"></script>
-    <script src="js/random-equalizer.js"></script>
+    <script src="js/analyzed-equalizer.js"></script>
     <script src="js/index.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css?family=Concert+One|Indie+Flower|Righteous|Roboto+Mono&display=swap"
@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <input type="file" id="fileloader">
     <div id="main_container">
       <div class="container">
         <div id="phone">
@@ -41,38 +42,70 @@
         </div>
         <div id="player">
           <div id="visualization">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
           </div>
           <span id="playing_name"></span>
           <div id="progress_container">

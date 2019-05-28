@@ -12,7 +12,7 @@ class Renderer {
         for (let m = 0; m < bars.length; m++) {
             const e = bars[m];
 
-            const c = Math.floor(Math.random() * 80);
+            const c = Math.floor(Math.random() * 90);
             e.style.height = heights[c];
             e.style.backgroundColor = colors[c % colors.length];
         }
