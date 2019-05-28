@@ -165,8 +165,7 @@ button {
 }
 
 span.bar {
-    background: yellow;
+    background-color: yellow;
     display: inline-block;
     width: 1.5%;
-    transition: height .35s ease-in; 
 }

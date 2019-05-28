@@ -32,16 +32,21 @@ function backspace() {
 }
 
 const bars = Array.from(document.getElementById('visualization').getElementsByClassName('bar'));
-const heights = Array.of(101);
+const colors = [
+    "#C501E1",
+    "#9A26F8",
+    "#6564FE",
+    "#2B97FA",
+    "#02C4E7",
+    "#16E6CC",
+    "#2EF9A0",
+    "#C6E501",
+    "#E7C501",
+    "#FF6A63",
+    "#F82D98",
+    "#E830CE"
+  ];
+  
 
-for (let n = 0; n < 101; n++)
-    heights[n] = n + `%`;
-
-function render() {
-    for (const e of bars)
-        e.style.height = heights[Math.floor(Math.random() * 70)];
-}
-
-setInterval(render, 500);
-
-render();
+const renderer = new Renderer();
+renderer.start();
