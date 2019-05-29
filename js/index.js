@@ -6,8 +6,16 @@ const pauseBtn = document.getElementsByClassName("btn pause")[0];
 
 const rightSide = document.getElementById('player');
 const volume_slider = document.getElementById('volume_slider');
+const bars = [];
+const visualization = document.getElementById('visualization');
 
-const bars = Array.from(document.getElementById('visualization').getElementsByClassName('bar'));
+for (let n = 0; n < 512; n++) {
+    const e = document.createElement('span');
+    e.classList.add('bar');
+    visualization.appendChild(e);
+    bars.push(e);
+}
+
 const colors = [
     "#C501E1",
     "#9A26F8",
@@ -102,11 +110,11 @@ function stop() {
     player.pause();
     player.currentTime = 0;
 }
-function keypadClick(n) {
-    n = n.target.innerText;
+function keypadClick(event) {
+    event = event.target.innerText;
 
-    if (n !== '*' && n !== '#' && (!dialedNumber.innerText || dialedNumber.innerText.length < 10))
-        dialedNumber.innerText = dialedNumber.innerText + n;
+    if (event !== '*' && event !== '#' && (!dialedNumber.innerText || dialedNumber.innerText.length < 10))
+        dialedNumber.innerText = dialedNumber.innerText + event;
 }
 function dialAction() {
     let k = dialedNumber.innerText;

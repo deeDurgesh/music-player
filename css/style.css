@@ -178,7 +178,7 @@ button {
 span.bar {
   background-color: white;
   display: inline-block;
-  width: calc(100% / 67);
+  width: calc(100% / 515);
 }
 
 #playing_name {
