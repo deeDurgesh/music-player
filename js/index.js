@@ -1,19 +1,37 @@
-const player = document.getElementById('audio_player');
-const dialedNumber = document.getElementById("dialed_number");
+const byId = id => document.getElementById(id);
+const firstByClassName = cls => document.getElementsByClassName(cls)[0];
 
-const playBtn = document.getElementsByClassName("btn play")[0];
-const pauseBtn = document.getElementsByClassName("btn pause")[0];
 
-const rightSide = document.getElementById('player');
-const volume_slider = document.getElementById('volume_slider');
-const bars = [];
-const visualization = document.getElementById('visualization');
+const player = byId('audio_player');
+const dialedNumber = byId("dialed_number");
 
-for (let n = 0; n < 512; n++) {
+const playBtn = firstByClassName("btn play");
+const pauseBtn = firstByClassName("btn pause");
+
+const rightSide = byId('player');
+const volume_slider = byId('volume_slider');
+const visualization = byId('visualization');
+
+const COLUMNS_COUNT = 512; 
+/*
+...
+span.bar {
+  background-color: white;
+  display: inline-block;
+  width: calc(100% / 515);
+}
+...
+line 181 of style.css
+width: calc(100% / ...); to  width: calc(100% / (COLUMNS_COUNT + 5));
+*/
+
+const bars = new Array(COLUMNS_COUNT);
+
+for (let n = 0; n < COLUMNS_COUNT; n++) {
     const e = document.createElement('span');
     e.classList.add('bar');
     visualization.appendChild(e);
-    bars.push(e);
+    bars[n] = e;
 }
 
 const colors = [
@@ -31,12 +49,12 @@ const colors = [
     "#E830CE"
 ];
 
-const music_name = document.getElementById('playing_name');
+const music_name = byId('playing_name');
 const renderer = new Renderer();
 
 class Progress {
     constructor() {
-        const e = document.getElementById('progress_container');
+        const e = byId('progress_container');
         this.progress = e.getElementsByTagName('progress')[0];
         [this._passedTime, this._duration] = e.getElementsByTagName('span');
     }
@@ -156,6 +174,6 @@ function loadDefault() {
     load('audio/Kalimba.mp3');
 }
 
-document.getElementById('fileloader').onchange = function () {
+byId('fileloader').onchange = function () {
     load(URL.createObjectURL(this.files[0]));
 }

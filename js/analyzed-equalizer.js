@@ -1,4 +1,4 @@
-const heights = Array.of(101);
+const heights = new Array(101);
 
 for (let n = 0; n < 101; n++)
     heights[n] = n + `%`;
